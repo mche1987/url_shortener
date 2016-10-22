@@ -1,0 +1,24 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "url shortener, duh",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mche1987/url_shortener.git"
+  },
+  "author": "Michael Cheong, Terry Cho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mche1987/url_shortener/issues"
+  },
+  "homepage": "https://github.com/mche1987/url_shortener#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongo": "^0.1.0"
+  }
+}
