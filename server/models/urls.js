@@ -1,13 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// var urlSchema = new mongoose.Schema({
-// 	fullUrl: String,
-// 	hashedUrl: String
-// })
-
-// mongoose.model("Url", urlSchema)
-
 // create the counters schema with an _id field and a seq field
 var CounterSchema = Schema({
 	_id: { type: String, required: true },
@@ -26,7 +19,6 @@ var urlSchema = new Schema({
 
 // middleware that always runs prior to saving new object?
 urlSchema.pre('save', function(next){
-	console.log("is this what terry thinks it is? a global object? probably not", this)
 	var doc = this;
 	counter.findByIdAndUpdate({_id: 'url_count'}, {$inc: {seq: 1} }, function(error, counter) {
 		if(error){
